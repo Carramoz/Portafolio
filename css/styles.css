@@ -1,42 +1,96 @@
 *{
     box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
 }
 body{
     width: 100%;
-    height: 100vh;
+    height: 200vh;
+    margin: 0;
+    background-color:rgb(29, 29, 51);
+    color: aliceblue;
 }
 .grid-container{
-    width: 100%;
-    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.5fr 2fr 2fr;
+    grid-template-rows: 2fr 6fr 2fr;
+    grid-template-areas: 
+    "header header header"
+    "nav main main"
+    "stack stack stack";
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+header{
+    grid-area: header;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+header h1{
+    background: linear-gradient(90deg, yellowgreen, aqua);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0;
+}
+header h2{
     margin: 0;
     padding: 0;
 }
-#menu{
-    background-color: blue;
+.menu-nav{
+   grid-area: nav;
+   background-color: transparent;
+   box-shadow: 0 0 10px 2.5px yellowgreen;
+   border-radius: 20px;
+   margin: 20px;
+   text-align: center;
+   display: flex;
+}
+nav > ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    margin: auto auto;
+    padding: 2px;
+}
+nav > ul > li{
+    margin: 2.5px 0;
+}
+main{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    padding: 0;
+    grid-area: main;
+    background-color: transparent;
+    gap: 10px;
+}
+.photo-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0;
     padding: 0;
 }
-#descripcion{
-    background-color: purple;
+.photo-container img{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    border: 0.5px solid yellowgreen;
+    box-shadow: 0 0 5px 1px yellowgreen;
+    border-radius: 20%;
+    object-fit: contain;
 }
-#foto{
-    background-color: pink;
-    text-align: center;
+.about-me{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
 }
-.menu-nav{
-    width: 80%;
-    height: 90vh;
-    margin: auto auto;
-    background-color: rgba(240, 255, 255, 0.6);
-    border-radius: 20px;
-    
+.stack{
+    grid-area: stack;
 }
-.texto-descripcion{
-    width: 80%;
-    height: 90vh;
-    margin: auto auto;
-    background-color: rgba(240, 255, 255, 0.6);
-    border-radius: 20px;
-    text-align: center;
+h2{
+    margin: 0 auto;
 }
