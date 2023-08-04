@@ -91,6 +91,28 @@ main{
 .stack{
     grid-area: stack;
 }
+.gallery-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.gallery-container img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid yellowgreen;
+}
 h2{
+    margin: 0 auto;
+}
+#formulario{
+    width: 100%;
+}
+#contacto{
+    width: 80%;
+    margin: 0 auto;
+}
+#contacto input{
+    display: block;
+    width: 100%;
     margin: 0 auto;
 }
