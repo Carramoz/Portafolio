@@ -56,22 +56,32 @@
                 </blockquote>               
                 <div class="console">
                 <h3>About Me</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus rem accusamus esse quasi architecto velit non earum eos. Sunt, aliquid reprehenderit. Esse inventore beatae ex aspernatur debitis ab quis quasi.</p>
+                <p>I am a Java Fullstack Jr developer with experience using HTML, CSS, Javascript,
+                    Bootstrap, Java and SQL for web development. My passion for design and my interest in
+                    problem solving push me to want to develop a career as a developer
+                    full stack, performing both in the front-end and the back-end. always willing to
+                    learn. Teamwork enthusiast. "The whole is greater than the sum of its parts" is
+                    a phrase I live by when it comes to teamwork.
+                </p>
+                <blockquote>
+                    <hr>
+                    <h6>techStack = document.getElementById("tech-stack");</h6>
+                    <h6>console.log(techStack);</h6>
+                    <hr> 
+                </blockquote> 
+                <h3>Tech stack</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>Java</li>
+                    <li>SQL</li>
+                    <li></li>
+                </ul>
                 </div>
             </div>
             <figure class="photo container-fluid">
-                <img width="200" height="200" src="./src/img/WhatsApp_Image_2023-07-18_at_4.13.46_PM-removebg-preview.png" alt="">
-                <figcaption>
-                    <h3>Tech stack</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>Java</li>
-                        <li>SQL</li>
-                        <li></li>
-                    </ul>
-                </figcaption>
+                <img src="./src/img/WhatsApp_Image_2023-07-18_at_4.13.46_PM-removebg-preview.png" alt="">
             </figure>
         </section>
         <section class="gallery-project container-fluid">
@@ -97,17 +107,19 @@
                 </figure>
             </div>
         </section>
-        <section class="form">
+        <hr>
+        <section>
             <h3>Contact</h3>
             <form action="">
-                <label for="">Nombre:</label>
-                <input type="text">
-                <label for="">Email:</label>
-                <input type="text">
-                <label for="">Telefono:</label>
-                <input type="text">
-                <label for="">Mensaje:</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono">
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="" id="mensaje" cols="" rows="5"></textarea>
+                <div id="boton"><input type="submit" value="Enviar"></div>
             </form>
         </section>
     </main>

@@ -1,8 +1,13 @@
 :root{
-    --background-color1: #ecede7; 
+    --background-color1: #ecede7;
+    --borderanimation-color1: grey;
+    --borderanimation-color2: gold;
+    --borderanimation-color3: brown;
+    --borderanimation-color4: rgb(35, 0, 0);
+    --borderanimation-width: 4px; 
 }
 body{
-    height: 300vh;
+    height: 200vh;
     background-color: var(--background-color1);
 }
 .navbar{
@@ -35,16 +40,6 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.console{
-    /* background: repeating-linear-gradient(
-        var(--background-color1) 2vh, 
-        var(--background-color1) 2vh, 
-        rgb(201, 196, 189) 3vh,
-        rgb(201, 196, 189) 3vh); */
-        /* box-shadow: inset 0 0 3px 0 gray;
-        border-radius: 5px;
-        padding: 1vh 1vw; */
-}
 .description p{
     opacity: 0;
     text-align: justify;
@@ -73,12 +68,17 @@ blockquote hr{
     align-items: center;
     justify-content: center;
     grid-column: 2;
+    padding: 10px;
 }
 .photo img{
     width: 100%;
+    height: 75%;
     object-fit: contain;
     border-radius: 50%;
-    border: solid thin grey;
+    animation: picBorderRotation 1.5s linear infinite;
+}
+.photo img:hover{
+    animation: picture 2s linear infinite;
 }
 .gallery-project{
     text-align: center;
@@ -95,25 +95,33 @@ blockquote hr{
     height: 200px;
     border: 2px solid brown;
 }
-.form{
-    text-align: left;
-    background-color: inherit
-}
-.form h3{
-    text-align: center;
-}
-.form form{
+form{
     width: 80%;
     margin: 0 auto;
 }
-.form input{
-    display: block;
-    width: 100%;
+h3{
+    text-align: center;
+    margin-bottom: 1vh;
 }
-.form textarea{
-    display: block;
+form input:not([type="submit"]), form textarea{
+    text-align: left;
     width: 100%;
+    margin: 0;
+    margin-bottom: 1vh;
 }
+#boton{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+input[type="submit"]{
+    width: 100%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    animation: picBorderRotation 2s linear infinite;
+}
+
 @keyframes text {
     to{
         opacity: 1;
@@ -128,5 +136,48 @@ blockquote hr{
     }
     100%{
         opacity: 0;
+    }
+}
+@keyframes picture{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.85);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes picBorderRotation{
+    0%{
+        border-top: var(--borderanimation-width) solid var(--borderanimation-color1);
+        border-right: var(--borderanimation-width) solid var(--borderanimation-color2);
+        border-bottom: var(--borderanimation-width) solid var(--borderanimation-color3);
+        border-left: var(--borderanimation-width) solid var(--borderanimation-color4);
+    }
+    25%{
+        border-top: var(--borderanimation-width) solid var(--borderanimation-color4);
+        border-right: var(--borderanimation-width) solid var(--borderanimation-color1);
+        border-bottom: var(--borderanimation-width) solid var(--borderanimation-color2);
+        border-left: var(--borderanimation-width) solid var(--borderanimation-color3);
+    }
+    50%{
+        border-top: var(--borderanimation-width) solid var(--borderanimation-color3);
+        border-right: var(--borderanimation-width) solid var(--borderanimation-color4);
+        border-bottom: var(--borderanimation-width) solid var(--borderanimation-color1);
+        border-left: var(--borderanimation-width) solid var(--borderanimation-color2);
+    }
+    75%{
+        border-top: var(--borderanimation-width) solid var(--borderanimation-color2);
+        border-right: var(--borderanimation-width) solid var(--borderanimation-color3);
+        border-bottom: var(--borderanimation-width) solid var(--borderanimation-color4);
+        border-left: var(--borderanimation-width) solid var(--borderanimation-color1);
+    }
+    100%{
+        border-top: var(--borderanimation-width) solid var(--borderanimation-color1);
+        border-right: var(--borderanimation-width) solid var(--borderanimation-color2);
+        border-bottom: var(--borderanimation-width) solid var(--borderanimation-color3);
+        border-left: var(--borderanimation-width) solid var(--borderanimation-color4);
     }
 }
