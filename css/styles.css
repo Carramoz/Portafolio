@@ -29,9 +29,6 @@ body{
     justify-content: space-evenly;
     padding: 0;
 }
-.about-me ul li{
-    margin: auto;
-}
 .description{
     grid-column: 1;
 }
@@ -41,10 +38,65 @@ body{
     -webkit-text-fill-color: transparent;
 }
 .description p{
-    opacity: 0;
     text-align: justify;
     font-weight: 350;
-    animation: text 2s ease-in 1;
+}
+.console *{
+    opacity: 0;
+    animation: text 1s ease-in 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.1s;
+}
+.typed{
+    margin: 0 auto;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+}
+.typed.two{
+    margin: 0 auto;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+    animation-delay: 0.9s;
+}
+.typed.three{
+    margin: 0 auto;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+.typed.four{
+    margin: 0 auto;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+    animation-delay: 2.4s;
+}
+.revealed{
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+    animation: revealed;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(10, end);
     animation-fill-mode: forwards;
 }
 .description p::after{
@@ -60,6 +112,10 @@ blockquote hr{
     border-right: 10px solid transparent;
     border-radius: 50%;
     margin: 1vh;
+}
+.logo{
+    width: 50px;
+    object-fit: cover;
 }
 .photo{
     display: flex;
@@ -181,3 +237,11 @@ input[type="submit"]{
         border-left: var(--borderanimation-width) solid var(--borderanimation-color4);
     }
 }
+@keyframes typing{
+    from{
+        width: 0;;
+    }
+    to{
+        width: 100%;
+    }
+}/*text animation*/
