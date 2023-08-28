@@ -7,14 +7,22 @@
     --borderanimation-width: 4px; 
 }
 body{
-    height: 200vh;
+    height: 100vh;
     background-color: var(--background-color1);
 }
 .navbar{
     box-shadow: 0 0 5px grey;
     margin-bottom: 25px;
 }
+footer{
+    box-shadow: 0 0 5px grey;
+    margin-top: 25px;
+}
+footer i{
+    margin: 1px;
+}
 .about-me{
+    width: 100%;
     display: grid;
     gap: 20px;
     grid-template-columns: 2fr 1fr;
@@ -42,10 +50,23 @@ body{
     font-weight: 350;
 }
 .console *{
+    width: 100%;
     opacity: 0;
     animation: text 1s ease-in 1;
     animation-fill-mode: forwards;
     animation-delay: 1.1s;
+}
+.tech-stack *{
+    opacity: 0;
+    animation: text 1s ease-in 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2.4s;
+}
+.tech-stack ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
 }
 .typed{
     margin: 0 auto;
@@ -118,40 +139,110 @@ blockquote hr{
     object-fit: cover;
 }
 .photo{
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     grid-column: 2;
-    padding: 10px;
+    padding: 0 50px;
 }
-.photo img{
+.photo figure img{
+    position: relative;
+    bottom: 39%;
     width: 100%;
-    height: 75%;
-    object-fit: contain;
-    border-radius: 50%;
-    animation: picBorderRotation 1.5s linear infinite;
 }
 .photo img:hover{
     animation: picture 2s linear infinite;
+}
+.about-me figcaption{
+    margin-top: 1%;
+}
+.about-me figcaption i{
+    font-size: xx-large;
+    margin: 1px;
+}
+.about-me figcaption i:hover{
+    color: brown;
 }
 .gallery-project{
     text-align: center;
 }
 .gallery{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 20px; */
 }
-.gallery-project figure img{
-    width: 250px;
-    height: 200px;
-    border: 2px solid brown;
+#project-one{
+    grid-column: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5%;
+    border: 1px solid white;
+}
+#project-one img{
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+}
+
+#projectstwoandthree{
+    grid-column: 2;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+#project-two{
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0;
+}
+#project-three{
+    width: 100%;
+    height: 50%;
+    padding: 2.5%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0;
+}
+#project-two img{
+    width: 100%;
+    object-fit: contain;
+}
+#project-three img{
+    width: 100%;
+    object-fit: contain;
+}
+#contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+#contact header{
+    grid-column: 1;
+    width: 100%;
+    text-align: center;
+}
+#encabezado{
+    grid-column: 2;
+    margin: auto;
+    text-align: center;
 }
 form{
+    grid-column: 1;
     width: 80%;
     margin: 0 auto;
 }
@@ -171,9 +262,9 @@ form input:not([type="submit"]), form textarea{
     margin: 0 auto;
 }
 input[type="submit"]{
-    width: 100%;
+    width: 20%;
     background-color: white;
-    padding: 5px;
+    padding: 2.5px;
     border-radius: 10px;
     animation: picBorderRotation 2s linear infinite;
 }
@@ -245,3 +336,22 @@ input[type="submit"]{
         width: 100%;
     }
 }/*text animation*/
+
+@media(max-width: 426px){
+    .about-me{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: smaller;
+    }
+    .gallery-project{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contact{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

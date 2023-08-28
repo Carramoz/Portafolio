@@ -17,7 +17,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Acerca de</a>
@@ -26,17 +26,7 @@
                         <a class="nav-link" href="#">Contacto</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Servicios</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Proyectos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <a class="nav-link" href="#">Proyecto</a>
                         </li>
                     </ul>
                 </div>
@@ -44,7 +34,7 @@
         </nav>
     </header>
     <main>
-        <section class="about-me container">
+        <section class="about-me container-fluid">
             <div class="description">
                 <h1>Carlos Ramos</h1>
                 <h2>Java Fullstack Developer Jr.</h2>
@@ -58,7 +48,7 @@
                     <h3>About Me</h3>
                     <p>I am a Java Fullstack Jr developer with experience using HTML, CSS, Javascript,
                         Bootstrap, Java and SQL for web development. My passion for design and my interest in
-                        problem solving push me to want to develop a career as a developer
+                        problem solving drive me to want to develop a career as a developer
                         full stack, performing both in the front-end and the back-end. Always willing to
                         learn. Teamwork enthusiast. "The whole is greater than the sum of its parts" is
                         a phrase I live by when it comes to teamwork.
@@ -70,61 +60,77 @@
                     <h6 class="typed four">console.log(techStack);</h6>
                     <hr> 
                 </blockquote> 
-                <h3>Tech stack</h3>
+                <div class="tech-stack">
+                    <h3>Tech stack</h3>
                 <br>
                 <ul>
-                    <li><span><img class="logo" src="./src/img/png-transparent-html-computer-icons-web-development-single-page-application-circle-logo-removebg-preview.png" alt=""> HTML</span></li>
-                    <li><span><img class="logo" src="./src/img/png-clipart-the-daily-dot-internet-online-newspaper-reddit-others-text-logo-removebg-preview.png" alt=""> CSS</span></li>
-                    <li><span><img class="logo" src="./src/img/download (2).png" alt=""> Javascript</span></li>
-                    <li><span><img class="logo" src="./src/img/java-logo-black-and-white-1-removebg-preview.png" alt=""> Java</span></li>
-                    <li><span><img class="logo" src="./src/img/images-removebg-preview.png" alt=""> SQL</span></li>
-                    <li></li>
+                    <li><figure><img class="logo" src="./src/img/png-transparent-html-computer-icons-web-development-single-page-application-circle-logo-removebg-preview.png" alt=""><figcaption>HTML</figcaption></figure></li>
+                    <li><figure><img class="logo" src="./src/img/png-clipart-the-daily-dot-internet-online-newspaper-reddit-others-text-logo-removebg-preview.png" alt=""><figcaption>CSS</figcaption></figure></li>
+                    <li><figure><img class="logo" src="./src/img/download (2).png" alt=""><figcaption>Javascript</figcaption></figure></li>
+                    <li><figure><img class="logo" src="./src/img/java-logo-black-and-white-1-removebg-preview.png" alt=""><figcaption>Java</figcaption></figure></li>
+                    <li><figure><img class="logo" src="./src/img/images-removebg-preview.png" alt=""><figcaption>SQL</figcaption></figure></li>
+                    <li><figure><i class="bi bi-git"></i><figcaption>Git</figcaption></figure></li>
                 </ul>
+                </div>
             </div>
-            <figure class="photo container-fluid">
-                <img src="./src/img/WhatsApp_Image_2023-07-18_at_4.13.46_PM-removebg-preview.png" alt="">
-            </figure>
-        </section>
-        <section class="gallery-project container-fluid">
-            <h3>Project Gallery</h3>
-            <div class="gallery container-fluid">
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <figure>
-                    <img src="" alt="">
+            <div class="photo">
+                <figure class="img-background">
+                    <img src="./src/img/WhatsApp_Image_2023-07-18_at_4.13.46_PM-removebg-preview.png" alt="">
+                    <figcaption>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                        <a href=""><i class="bi bi-github"></i></a>
+                        <a href=""><i class="bi bi-cloud-download"></i></a>
+                    </figcaption>
                 </figure>
             </div>
         </section>
         <hr>
-        <section>
-            <h3>Contact</h3>
+        <section class="gallery-project container-fluid">
+            <h3>Project Gallery</h3>
+            <div class="gallery container-fluid">
+                <figure id="project-one">
+                    <img src="./src/img/PawsitiveVibes.jpeg" alt="">
+                    <figcaption><h4>E-commerce Pawsitive Vibes</h4></figcaption>
+                </figure>
+                <div id="projectstwoandthree">
+                    <figure id="project-two" src="" alt="">
+                        <img src="./src/img/PawsitiveVibes2.jpeg" alt="">
+                    </figure>
+                    <figure id="project-three">
+                        <img src="./src/img/Pawsitivevibes3.jpeg" alt="">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="contact container-fluid">
+            <header><h3>Contact</h3></header>
             <form action="">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre">
                 <label for="email">Email:</label>
                 <input type="email" id="email">
                 <label for="telefono">Telefono:</label>
-                <input type="tel" id="telefono">
+                <input type="tel" id="telefono" pattern="[0-9]{10}">
                 <label for="mensaje">Mensaje:</label>
                 <textarea name="" id="mensaje" cols="" rows="5"></textarea>
                 <div id="boton"><input type="submit" value="Enviar"></div>
             </form>
+            <div id="encabezado" class="container">
+                <h1>¿Trabajamos juntos?</h1>
+                <h3>¿Cómo te tomas tu café?</h3>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top container-fluid">   
+        <div class="col-md-4 d-flex align-items-center">
+              <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Carlos Ramos</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-github"></i>
+        </ul>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
